@@ -12,39 +12,46 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
-              <br />
-              <br />
-              I’m proficient in
-              <i>
-                <b className="purple">
-                  {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
-                </b>
-              </i>
-              — and I enjoy working across both backend and frontend stacks.
-              <br />
-              <br />
-              My key areas of interest include developing
-              <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
-              </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+            <p class="home-about-body">
+              <p>
+                I’m <span class="highlight">Manisha Thakare</span>, a
+                <span class="purple"> DevOps Engineer</span> passionate about
+                building secure, scalable, and highly automated cloud
+                infrastructures. I enjoy transforming complex deployment
+                challenges into reliable, production-ready systems using modern
+                DevOps practices.
+              </p>
+
+              <p>
+                I specialize in <span class="purple"> AWS Cloud</span>,
+                <span class="purple"> Containerization</span>,
+                <span class="purple"> CI/CD Pipelines</span>, and
+                <span class="purple"> Infrastructure as Code</span>, with
+                hands-on experience architecting cloud-native solutions using
+                <span class="purple"> Terraform</span>, orchestrating containers
+                with
+                <span class="purple"> Kubernetes & Helm</span>, and automating
+                end-to-end infrastructure workflows.
+              </p>
+
+              <p>
+                I have strong experience with <span class="purple">Linux</span>,
+                <span class="purple"> Docker</span>,
+                <span class="purple"> GitOps</span>,
+                <span class="purple"> Ansible</span>,
+                <span class="purple"> Monitoring & Logging</span>, and
+                <span class="purple"> Kafka</span>, enabling teams to deploy
+                faster, operate efficiently, and maintain high system
+                reliability.
+              </p>
+
+              <p>
+                I also work with <span class="purple"> SQL databases</span>,
+                <span class="purple"> Jira</span> for project workflows, and
+                <span class="purple"> SonarQube</span> for continuous code
+                quality and security analysis—ensuring high standards throughout
+                the delivery pipeline.
+              </p>
             </p>
           </Col>
           <Col md={4} className="myAvtar">

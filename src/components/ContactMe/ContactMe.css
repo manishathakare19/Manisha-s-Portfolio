@@ -1,0 +1,128 @@
+/* src/components/ContactMe/ContactMe.css */
+
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white;
+}
+
+.terminal-window {
+  background-color: #111122;
+  border: 2px solid #8a4fff; /* Purple Accent */
+  border-radius: 12px;
+  padding: 40px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(138, 79, 255, 0.5);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.terminal-text {
+  color: #a0a0c0;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.promptline {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.prompt {
+  color: #8a4fff;
+  margin-right: 10px;
+}
+
+/* Blinking cursor */
+.cursor {
+  color: #8a4fff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.tagline {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Right Side Form */
+.form-header {
+  color: #8a4fff;
+  margin-bottom: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.accent {
+  color: #8a4fff;
+  margin-right: 8px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.terminal-input {
+  width: 100%;
+  background-color: #111122;
+  border: 1px solid #333355;
+  border-radius: 8px;
+  padding: 15px;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.terminal-input:focus {
+  border-color: #8a4fff;
+  box-shadow: 0 0 10px rgba(138, 79, 255, 0.5);
+}
+
+/* Button */
+.send-btn {
+  background-color: #8a4fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(138, 79, 255, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #7030e0;
+}
+
+.contact-info {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.info-value {
+  color: #8a4fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
