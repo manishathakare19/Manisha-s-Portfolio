@@ -769,25 +769,6 @@ button:focus {
 
 /* --- Add to bottom of src/style.css --- */
 
-/* The "Terminal" Window Container */
-.terminal-window {
-  background-color: #1e1e30;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  border: 1px solid #3d2c5e; /* Subtle purple border */
-  overflow: hidden;
-  margin-top: 20px;
-  text-align: left;
-}
-
-/* Terminal Header (The top bar with buttons) */
-.terminal-header {
-  background-color: #141220;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #2d2d44;
-}
 
 /* The Red/Yellow/Green buttons */
 .terminal-button {
@@ -800,14 +781,6 @@ button:focus {
 .yellow { background-color: #ffbd2e; }
 .green { background-color: #27c93f; }
 
-/* Terminal Body Text */
-.terminal-body {
-  padding: 20px;
-  font-family: 'Courier New', Courier, monospace; /* Code font */
-  color: #dcdcdc;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
 
 /* The flashing cursor effect */
 .cursor {
@@ -824,8 +797,85 @@ button:focus {
   50% { opacity: 0; }
 }
 
-/* Highlighted keywords in the text */
-.highlight {
-  color: #c770f0;
-  font-weight: bold;
+
+
+
+
+/* --- Terminal Design Updates --- */
+
+.terminal-window {
+  text-align: left;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #1c1c2e; /* Deep code-editor background */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(138, 79, 255, 0.3); /* Subtle purple border */
+  position: relative;
+  transition: all 0.3s ease;
+  height: auto; /* IMPORTANT: Allows box to grow with content */
+  min-height: 400px;
+  overflow: hidden; /* Keeps corners rounded */
 }
+
+.terminal-header {
+  background: #13131f; /* Darker header */
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2d2d44;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+  margin-right: 15px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.terminal-title {
+  font-family: 'Courier New', monospace;
+  color: #9ca3af;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.terminal-body {
+  padding: 25px;
+  font-family: 'Fira Code', 'Roboto Mono', monospace; /* Tech font */
+  color: #d1d5db;
+  font-size: 1em;
+  line-height: 1.8;
+  white-space: pre-wrap; /* Preserves spacing but wraps text */
+}
+
+/* Syntax Highlighting for the "Unique" look */
+.keyword { color: #c770f0; font-weight: bold; } /* Purple */
+.string { color: #a6e22e; } /* Green */
+.variable { color: #66d9ef; } /* Blue */
+.function { color: #f92672; } /* Pink */
+.comment { color: #75715e; font-style: italic; } /* Grey */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: #c770f0;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+

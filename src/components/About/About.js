@@ -5,16 +5,6 @@ import Github from "./Github";
 import Techstack from "./Techstack"; 
 import laptopImg from "../../Assets/about.png"; 
 
-// IMPORTING ICONS CORRECTLY
-// We use 'fa' (FontAwesome) for Java because 'si' doesn't have it.
-import { FaJava } from "react-icons/fa"; 
-import {
-  SiPython,
-  SiReact,
-  SiMysql,
-  SiSpringboot,
-} from "react-icons/si";
-
 function About() {
   return (
     <Container fluid className="about-section">
@@ -41,39 +31,41 @@ function About() {
                 <div className="terminal-button green"></div>
               </div>
               <div className="terminal-body">
-                <p> <span className="highlight">User.Name</span> = "Manisha Thakare";</p>
-                <p> <span className="highlight">User.Role</span> = "Software Developer";</p>
+                <p>
+                  <span className="comment">// Current Status: Online</span><br/>
+                  <span className="comment">// Loading User Profile...</span>
+                </p>
                 <br />
                 <p>
-                  a DevOps Engineer focused on automating cloud infrastructure and building reliable deployment pipelines. I work with AWS, Kubernetes, Terraform, CI/CD, and Monitoring to deliver scalable and production-ready environments.
-                  <br /> <br />
-                  <span className="highlight">Technical Toolkit:</span>
-                  <ul>
-                    <li>Cloud Platforms: AWS (EC2, VPC, RDS, S3, Lambda, IAM, CloudWatch, ALB, EBS, Route 53, CloudFront, EKS, ECR, AWS CloudFormation, Certificate Manager, AWS Organizations, Billing & Cost Management).</li> 
-                    <li>DevOps Tools: Jenkins, GitLab CI/CD, GitHub Actions, Docker, Kubernetes, Ansible, SonarQube, Trivy, Owasp dependency check. </li>
-                    <li>Monitoring: Prometheus, Grafana, AWS CloudWatch, Datadog. </li>
-                    <li>IaC & Automation: Terraform, AWS CloudFormation (Basic), Bash, Python.</li> 
-                    <li>Programming Languages: Python (Basic). </li>
-                    <li>Operating System: Linux (Ubuntu, Amazon Linux), Windows Server.</li> 
-                    <li>Database Management System (DBMS): MySQL, AWS RDS </li>
-                    <li> Web Servers: Nginx, Apache, Tomcat. </li>
-                    <li>Version Control Systems: GitHub, Bitbucket, GitLab.</li>
-                  </ul>
+                  <span className="json-key">const</span> user = &#123;<br/>
+                  &nbsp;&nbsp;<span className="json-key">name:</span> <span className="json-string">"Manisha Thakare"</span>,<br/>
+                  &nbsp;&nbsp;<span className="json-key">role:</span> <span className="json-string">"DevOps Engineer"</span>,<br/>
+                  &nbsp;&nbsp;<span className="json-key">mission:</span> <span className="json-string">"Automating cloud infrastructure & building reliable pipelines."</span>,<br/>
+                  &nbsp;&nbsp;<span className="json-key">skills:</span> &#123;<br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="json-key">cloud:</span> [<span className="json-string">"AWS (EC2, VPC, S3, Lambda, EKS)"</span>, <span className="json-string">"CloudFormation"</span>],<br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="json-key">devops:</span> [<span className="json-string">"Jenkins"</span>, <span className="json-string">"GitLab CI"</span>, <span className="json-string">"Docker"</span>, <span className="json-string">"K8s"</span>, <span className="json-string">"Ansible"</span>],<br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="json-key">monitoring:</span> [<span className="json-string">"Prometheus"</span>, <span className="json-string">"Grafana"</span>, <span className="json-string">"Datadog"</span>],<br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="json-key">iac:</span> [<span className="json-string">"Terraform"</span>, <span className="json-string">"Bash"</span>, <span className="json-string">"Python"</span>]<br/>
+                  &nbsp;&nbsp;&#125;<br/>
+                  &#125;;
                 </p>
-                <p> Ready to code... <span className="cursor">|</span></p>
+                <br/>
+                <p>
+                  <span className="json-key">user</span>.code(); <span className="cursor">|</span>
+                </p>
               </div>
             </div>
           </Col>
 
-          {/* RIGHT SIDE: Floating Icons Visual */}
-          <Col md={5} style={{ paddingBottom: 20 }}>
-                        <img
-                          src={laptopImg}
-                          alt="home pic"
-                          className="img-fluid"
-                          style={{ maxHeight: "450px" }}
-                        />
-                      </Col>
+          {/* RIGHT SIDE: Laptop Image */}
+          <Col md={5} style={{ paddingBottom: 20, display: "flex", justifyContent: "center" }}>
+            <img
+              src={laptopImg}
+              alt="home pic"
+              className="img-fluid"
+              style={{ maxHeight: "450px" }}
+            />
+          </Col>
         </Row>
 
         {/* ROW 3: Skillsets */}
@@ -82,6 +74,8 @@ function About() {
         </h1>
 
         <Techstack />
+        
+        
         <Github />
       </Container>
     </Container>
